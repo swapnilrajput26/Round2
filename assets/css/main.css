@@ -259,6 +259,7 @@ label.form-label {
   align-items: center;
 }
 .diamond_section .diamond-links .diamond-links__item {
+  cursor: pointer;
   transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.6s;
 }
 .diamond_section .diamond-links .diamond-links__item::before {

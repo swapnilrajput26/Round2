@@ -7,7 +7,7 @@
     .diamond-links{
 
         .diamond-links__item{
-            
+            cursor: pointer;
             transition : $transition_slow;
             &::before{
                 content: "";
