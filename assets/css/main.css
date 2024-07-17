@@ -15,7 +15,7 @@
   --light: #DDDBD4;
   --border: #EAEAEA;
   --background: #F4F1EA;
-  --yellow: #FFCC19;
+  --yellow: #fbad39;
 }
 
 .color-primary {
@@ -336,4 +336,138 @@ label.form-label {
 }
 .diamond_section .diamond-links .diamond-links__item.active .diamond-links__item-content p {
   opacity: 1;
+}
+
+.product_section .product-wrapper {
+  background-color: #f4f1ea;
+  padding: 70px 0px 60px;
+  display: flex;
+  text-align: center;
+  transition: all ease 0.35s;
+  background: #fff;
+  overflow: hidden;
+}
+.product_section .product-wrapper .product-category {
+  position: relative;
+  transition: all ease 0.35s;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 0 1px var(--border);
+}
+.product_section .product-wrapper .product-category .product-icon-top {
+  position: absolute;
+  top: calc(100% - 70px);
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 100%;
+  transition: all ease 0.35s;
+}
+.product_section .product-wrapper .product-category .product-icon-top svg {
+  width: 180px;
+}
+.product_section .product-wrapper .product-category .product-img {
+  position: relative;
+  transition: all ease 0.35s;
+  overflow: hidden;
+}
+.product_section .product-wrapper .product-category .product-img a {
+  position: relative;
+  z-index: 2;
+}
+.product_section .product-wrapper .product-category .product-img a img {
+  height: auto;
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.product_section .product-wrapper .product-category h6 {
+  font-size: 50px;
+  text-transform: uppercase;
+  line-height: 1.0714285714;
+  font-weight: 700;
+  color: var(--border);
+  opacity: 0.3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  transform: rotate(-30deg);
+  z-index: 1;
+  pointer-events: none;
+  font-family: var(--barlow-font);
+}
+.product_section .product-wrapper .product-category .decor-leaf {
+  overflow: hidden;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transform: translate(-40px, 40px);
+  transition: all ease 0.35s;
+  transition-delay: 0.3s;
+  opacity: 0;
+}
+.product_section .product-wrapper .product-category .decor-leaf-2 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transform: translate(40px, -40px);
+  transition: all ease 0.35s;
+  transition-delay: 0.3s;
+  opacity: 0;
+}
+.product_section .product-wrapper .product-category .product-icon {
+  opacity: 0;
+  min-height: 130px;
+}
+.product_section .product-wrapper .product-category .product-icon svg {
+  max-width: 100%;
+  overflow: hidden;
+}
+.product_section .product-wrapper .product-category .product-content {
+  transition: all ease 0.35s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.product_section .product-wrapper .product-category .product-content h4 a {
+  font-size: 50px;
+  line-height: 1.25em;
+  font-family: var(--dafoe-font);
+  color: #fff;
+}
+.product_section .product-wrapper .product-category .product-content .cat-total {
+  font-size: 18px;
+  line-height: 1.3888888889;
+  font-weight: 500;
+  color: #fff;
+  font-family: var(--barlow-font);
+}
+.product_section .product-wrapper .product-category:hover {
+  background-color: var(--yellow);
+}
+.product_section .product-wrapper .product-category:hover .product-icon-top {
+  top: 0;
+  transform: translate(-50%, 0);
+}
+.product_section .product-wrapper .product-category:hover .product-icon-top svg {
+  fill: var(--light) !important;
+}
+.product_section .product-wrapper .product-category:hover .decor-leaf, .product_section .product-wrapper .product-category:hover .decor-leaf-2 {
+  opacity: 1;
+  transform: translate(0);
+}
+.product_section .product-wrapper .product-category:hover .product-icon {
+  order: -1;
+}
+.product_section .product-wrapper .product-category:hover .product-icon svg {
+  fill: #fff !important;
+}
+.product_section .product-wrapper .product-category:hover .product-content {
+  opacity: 1;
+  transform: translateY(0);
 }/*# sourceMappingURL=main.css.map */
