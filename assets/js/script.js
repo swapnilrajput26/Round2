@@ -11,7 +11,7 @@ $(document).ready(function() {
     }
 
     function startInterval() {
-        interval = setInterval(activateNextItem, 2000);
+        interval = setInterval(activateNextItem, 1500);
     }
 
     function stopInterval() {
