@@ -1,0 +1,114 @@
+@use "sass:map";
+
+.diamond_section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    .diamond-links{
+
+        .diamond-links__item{
+            
+            transition : $transition_slow;
+            &::before{
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: scale(1.15, 1.1);
+            }
+
+            .diamond-links__item-img{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: var(--border-radius-3, 30px);
+                overflow: hidden;
+                pointer-events: none;
+                transition : $transition_slow;
+
+
+                @media (min-width:1200px) {
+                    transform: rotate(45deg) scale(1.20);
+                }
+
+                img{
+                    transform: rotate(-45deg) scale(1.37);
+                    
+                }
+
+            }
+
+            .diamond-links__item-content{
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                padding: 20px;
+                z-index: 1;
+                gap: 10rem;
+                text-align: center;
+
+                h3 {
+                    margin-bottom: auto;
+                    font-size: 2rem;
+                    color: $yellow;
+                    font-family: $dafoe-font;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    letter-spacing: .2em;
+                    line-height: 120%;
+                }
+
+                p{
+                    font-size: $base-font;
+                    color: $light;
+                    font-family: $barlow-font ;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    opacity: 0;
+                    transition: opacity cubic-bezier(0.165, 0.84, 0.44, 1) .5s .25s;
+                }
+            }
+
+
+            &:hover{
+                .diamond-links__item-img{
+                    transform: rotate(0deg) scale(1.15);
+                    
+                    img{
+                        transform: rotate(0deg) scale(1.25);
+                    }
+                }
+                .diamond-links__item-content{
+                    p{
+                        opacity: 1;
+                    }
+                }
+            }
+            &.active{
+                .diamond-links__item-img{
+                    transform: rotate(0deg) scale(1.15);
+                    
+                    img{
+                        transform: rotate(0deg) scale(1.25);
+                    }
+                }
+                .diamond-links__item-content{
+                    p{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+// .diamond-links__item:not(.active):not(.hover) .diamond-links__item-img{
+
+// }
