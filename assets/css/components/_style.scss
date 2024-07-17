@@ -108,7 +108,18 @@
 
 }
 
-
-// .diamond-links__item:not(.active):not(.hover) .diamond-links__item-img{
-
-// }
+.product_section{
+    .product-cat-link {
+        
+        background-color: #f4f1ea;
+        box-shadow: 0 0 0 1px #b7b7b7;
+        padding: 70px 30px 60px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        transition: all ease .35s;
+        background: #fff;
+        overflow: hidden;
+        box-shadow: 0 0 0 1px var(--border);
+    }
+}
